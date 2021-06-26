@@ -1,0 +1,50 @@
+{
+    "name": "ncv-template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "install:client": "cd ./client && npm install",
+        "install:server": "npm install",
+        "install:all": "npm run install:server && npm run install:client",
+        "build:client": "cd ./client && npm run build",
+        "build:server": "tsc",
+        "build:all": "npm run build:server && npm run build:client",
+        "watch:client": "npm run --prefix ./client watch",
+        "watch:server": "tsc -w",
+        "watch": "concurrently -k -p \"[{name}]\" -n \"Server-build,Server,Client\" -c \"blue.bold,yellow.bold,green.bold\" \"npm run watch:server\" \"npm run start:server\" \"npm run watch:client\"",
+        "start:server": "nodemon --watch ./dist/server ./dist/server/app.js"
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "../dist/client/*",
+            "../server",
+            "../client"
+        ],
+        "delay": "1000"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/natan-morar/ncv-template.git"
+    },
+    "author": "NC-Vision Team",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/natan-morar/ncv-template/issues"
+    },
+    "homepage": "https://github.com/natan-morar/ncv-template#readme",
+    "devDependencies": {
+        "@types/express": "^4.17.12",
+        "@types/node": "^14.17.4",
+        "@types/socket.io": "2.1.11",
+        "concurrently": "^5.3.0",
+        "eslint": "^7.29.0",
+        "nodemon": "^2.0.7",
+        "parcel-bundler": "^1.12.5"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "socket.io": "2.3.0"
+    }
+}

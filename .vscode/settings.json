@@ -1,0 +1,14 @@
+{
+    "editor.rulers": [80, 120],
+    "files.exclude": {
+        ".history/": true,
+        "**/node_modules": true,
+        "dist/": true
+    },
+    "editor.formatOnSave": true,
+    "editor.semanticHighlighting.enabled": true,
+    "scssFormatter.tabWidth": 4,
+    "testcafeTestRunner.workspaceRoot": "test/e2e",
+    "git.ignoreLimitWarning": true,
+    "jest.autoEnable": false,
+}

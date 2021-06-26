@@ -1,0 +1,31 @@
+{
+    "name": "ncv-template-client",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "parcel build ./src/*.html -d ../dist/client --no-content-hash",
+        "watch": "parcel ./src/*.html -d ../dist/client"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/natan-morar/ncv-template.git"
+    },
+    "author": "NC-Vision Team",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/natan-morar/ncv-template/issues"
+    },
+    "homepage": "https://github.com/natan-morar/ncv-template#readme",
+    "devDependencies": {
+        "@types/jquery": "3.3.34",
+        "@types/socket.io-client": "^1.4.34",
+        "sass": "^1.27.0",
+        "typescript": "^4.3.4"
+    },
+    "dependencies": {
+        "jquery": "3.4.1",
+        "socket.io": "^2.3.0"
+    }
+}

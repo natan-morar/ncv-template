@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "ES2018",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist/server",
+        "baseUrl": "src",
+        "forceConsistentCasingInFileNames": true,
+        "typeRoots": ["node_modules/@types", "types"],
+        "noImplicitUseStrict": true,
+        "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+        "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */
+    },
+    "watchOptions": {
+        // Use native file system events for files and directories
+        "watchFile": "useFsEvents",
+        "watchDirectory": "useFsEvents",
+        // Poll files for updates more frequently
+        // when they're updated a lot.
+        "fallbackPolling": "dynamicPriority"
+    },
+    "include": ["src/**/*", "src/app.ts"],
+    "exclude": ["node_modules/", "client/", "app/"]
+}
