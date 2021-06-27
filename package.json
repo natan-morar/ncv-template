@@ -13,7 +13,7 @@
         "build:all": "npm run build:server && npm run build:client",
         "watch:client": "npm run --prefix ./client watch",
         "watch:server": "tsc -w",
-        "watch": "concurrently -k -p \"[{name}]\" -n \"Server-build,Server,Client\" -c \"blue.bold,yellow.bold,green.bold\" \"npm run watch:server\" \"npm run start:server\" \"npm run watch:client\"",
+        "watch": "tsc && concurrently -k -p \"[{name}]\" -n \"Server-build,Server,Client\" -c \"blue.bold,yellow.bold,green.bold\" \"npm run watch:server\" \"npm run start:server\" \"npm run watch:client\"",
         "start:server": "nodemon --watch ./dist/server ./dist/server/app.js"
     },
     "nodemonConfig": {
