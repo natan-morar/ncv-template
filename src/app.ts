@@ -105,8 +105,7 @@ export class App {
         app.get("/1", (req, res) => res.send("Express + TypeScript Server 1"));
 
         app.get("/api/v1/system", (req, res) => {
-            
-            res.json([this.cpuLoad,os.freemem(),os.totalmem()]);
+            res.json([this.cpuLoad,os.totalmem()-os.freemem(),os.totalmem()]);
         });
 
     }

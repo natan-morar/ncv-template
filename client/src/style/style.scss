@@ -1,3 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {
     color: red;
+
+    &:hover {
+        color: green;
+    }
+
+    flex: 0;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+
+    > .left {
+        width: 200px;
+        background-color: burlywood;
+    }
+
+    > .right {
+        flex: 1;
+        background-color: rgb(213, 245, 255);
+    }
+}
+
+table {
+    border: 1px solid #681;
+
+    > tr {
+        border-top: 1px solid #888;
+        border-left: 1px solid #888;
+
+        > td {
+            border-bottom: 1px solid #888;
+            border-right: 1px solid #888;
+        }
+    }
 }

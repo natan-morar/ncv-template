@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NCV Template</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NCV Template</title>
+        <!-- <link rel="manifest" href="manifest.json"> -->
+        <meta name="theme-color" content="#31d53d" />
+        <link rel="stylesheet" href="style/style.scss" />
+    </head>
 
-    <!-- <link rel="manifest" href="manifest.json"> -->
-    <meta name="theme-color" content="#31d53d">
-    <link rel="stylesheet" href="style/style.scss">
+    <body>
+        <h1>Hello</h1>
 
+        <div class="content">
+            <div class="left">
+                <button class="btn-increment">Increment</button>
+                <div class="counter">-</div>
 
-</head>
+                <button class="btn-check">System check</button>
+                <div class="load">-</div>
+                <div class="mem">-</div>
+            </div>
+            <div class="right"></div>
+        </div>
 
-
-<body>
-
-    <h1>Hello</h1>
-
-    <button class="btn-increment">Increment</button>
-    <div class="counter">-</div>
-
-    <button class="btn-check">System check</button>
-    <div class="load">-</div>
-    <div class="mem">-</div>
-
-    <script src="ts/index.ts"></script>
-
-</body>
-
-
-
+        <script src="ts/index.ts"></script>
+    </body>
 </html>
