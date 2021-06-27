@@ -40,7 +40,8 @@ export class App {
     }
 
     private registerRoutes() {
-        app.get("/", (req, res) => res.sendFile(path.join(publicPath + "/index.html")));
+        app.use("/", express.static(publicPath));
+        // app.get("/2", (req, res) => res.sendFile(path.join(publicPath + "/index.html")));
         app.get("/1", (req, res) => res.send("Express + TypeScript Server 1"));
     }
 }
